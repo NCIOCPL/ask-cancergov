@@ -1,0 +1,21 @@
+{
+  "name": "ask-cancergov",
+  "version": "1.0.0",
+  "description": "Alexa skill for CancerGov services",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/.bin/mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ask-sdk-core": "^2.7.0",
+    "ask-sdk-model": "^1.25.1",
+    "axios": "^0.19.1"
+  },
+  "devDependencies": {
+    "ask-sdk-test": "^2.3.0",
+    "mocha": "^7.0.0",
+    "nock": "^11.7.1"
+  }
+}

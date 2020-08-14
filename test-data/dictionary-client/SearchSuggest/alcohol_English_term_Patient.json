@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "result_count": 4,
+    "message": ["Found 4 results."]
+  },
+  "result": [{
+    "id": 463134,
+    "term": "alcohol"
+  }, {
+    "id": 644767,
+    "term": "alcohol ablation"
+  }, {
+    "id": 457951,
+    "term": "alcohol dependence"
+  }, {
+    "id": 450090,
+    "term": "alcoholism"
+  }]
+}

@@ -1,0 +1,8 @@
+{
+  "meta": {
+    "audience": "Patient",
+    "language": "English",
+    "message": ["No result found."]
+  },
+  "term": null
+}

@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "audience": "Patient",
+    "language": "English",
+    "message": ["OK"]
+  },
+  "term": {
+    "id": "445043",
+    "term": "lung cancer",
+    "alias": [],
+    "date_first_published": "2005-10-24",
+    "date_last_modified": "2006-11-07",
+    "definition": {
+      "html": "Cancer that forms in tissues of the lung, usually in the cells lining air passages. The two main types are small cell lung cancer and non-small cell lung cancer. These types are diagnosed based on how the cells look under a microscope.",
+      "text": "Cancer that forms in tissues of the lung, usually in the cells lining air passages. The two main types are small cell lung cancer and non-small cell lung cancer. These types are diagnosed based on how the cells look under a microscope."
+    },
+    "images": [{
+      "ref": "/images/cdr/live/CDR466533.jpg",
+      "alt": "Respiratory anatomy; drawing shows right lung with upper, middle, and lower lobes; left lung with upper and lower lobes; and the trachea, bronchi, lymph nodes, and diaphragm. Inset shows bronchioles, alveoli, artery, and vein.",
+      "caption": "Anatomy of the respiratory system, showing the trachea and both lungs and their lobes and airways. Lymph nodes and the diaphragm are also shown. Oxygen is inhaled into the lungs and passes through the thin membranes of the alveoli and into the bloodstream (see inset)."
+    }],
+    "videos": [],
+    "pronunciation": {
+      "audio": "/PublishedContent/Media/CDR/media/714622.mp3",
+      "key": "(lung KAN-ser)"
+    },
+    "related": {
+      "drug_summary": [],
+      "external": [{
+        "url": "https://www.cancer.gov/types/lung",
+        "text": "Lung Cancer"
+      }],
+      "summary": [],
+      "term": []
+    }
+  }
+}
