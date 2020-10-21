@@ -1,0 +1,40 @@
+{
+  "name": "hello-world",
+  "version": "1.1.0",
+  "description": "alexa utility for quickly building skills",
+  "main": "index.js",
+  "scripts": {
+    "buildmodel": "node build_interaction_model.js",
+    "test": "mocha \"test/**/*.js\"",
+    "build:prepare": "rm -rf ../lambda ../.ask/build",
+    "build": "npm run build:prepare && babel ./ --out-dir ../lambda --ignore node_modules,lib/ask-sdk-jsx-for-apl && npm run build:post",
+    "build:post": "cp package.json ../lambda; cd ../lambda; npm install",
+    "clean": "rm -rf ../lambda node_modules ../.ask/build",
+    "reinstall": "rm -rf ./node_modules && npm install"
+  },
+  "author": "Amazon Alexa",
+  "license": "ISC",
+  "dependencies": {
+    "ask-sdk": "^2.9.0",
+    "ask-sdk-controls": "0.2.1",
+    "ask-sdk-jsx-for-apl": "^1.0.0-beta",
+    "aws-sdk": "^2.326.0",
+    "axios": "^0.21.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "ask-sdk-local-debug": "^1.1.0",
+    "chai": "^4.2.0",
+    "husky": "^4.3.8",
+    "mocha": "^6.2.2",
+    "source-map-support": "^0.5.19"
+  },
+  "husky": {
+    "hooks": {}
+  }
+}

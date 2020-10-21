@@ -1,0 +1,36 @@
+{
+  "askcliStatesVersion": "2020-03-31",
+  "profiles": {
+    "nci": {
+      "skillId": "amzn1.ask.skill.36f0f152-2421-4eb7-967e-bacd7722f342",
+      "skillInfrastructure": {
+        "@ask-cli/cfn-deployer": {
+          "deployState": {
+            "default": {
+              "s3": {
+                "bucket": "ask-sape-ask-cancer-cli-nciprofil-useast1-1613973867590",
+                "key": "endpoint/build.zip"
+              },
+              "stackId": "arn:aws:cloudformation:us-east-1:970892800528:stack/ask-SapientCancerDictionary-default-skillStack-1613973867590/d5289460-74d3-11eb-b023-121b2f990f49",
+              "outputs": [
+                {
+                  "OutputKey": "SkillEndpoint",
+                  "OutputValue": "arn:aws:lambda:us-east-1:970892800528:function:ask-SapientCancerDictionary-def-AlexaSkillFunction-FTJECNC3I5CX",
+                  "Description": "LambdaARN for the regional endpoint"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "skillMetadata": {
+        "lastDeployHash": "EE5FN/QwfX/VjARHhHhcm51FRhA="
+      },
+      "code": {
+        "default": {
+          "lastDeployHash": "WWRolWw78s9ANZthux6OysFqLVI="
+        }
+      }
+    }
+  }
+}

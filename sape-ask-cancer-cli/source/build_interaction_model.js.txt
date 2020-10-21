@@ -1,0 +1,31 @@
+"use strict";
+
+// Generate the interaction model using the Controls framework
+// https://developer.amazon.com/en-US/docs/alexa/ask-sdk-controls/about-controls-framework.html
+// See "Interaction Model Generation"
+// http://ask-sdk-controls-typedoc.s3-website-us-east-1.amazonaws.com/
+// Adding slots
+// https://github.com/alexa/skill-sample-controls-fruit-shop/blob/5c43d46ddc7a4addd8252b6344049363f8162839/lambda/src/build_interaction_model.js//
+const {
+  ControlInteractionModelGenerator
+} = require('ask-sdk-controls'); // Phrase slots
+// https://developer.amazon.com/blogs/alexa/post/a2716002-0f50-4587-b038-31ce631c0c07/enhance-speech-recognition-of-your-alexa-skills-with-phrase-slots-and-amazon-searchquery
+
+
+new ControlInteractionModelGenerator().withInvocationName('sapient cancer dictionary').addIntent({
+  name: 'AMAZON.StopIntent'
+}).addIntent({
+  name: 'AMAZON.NavigateHomeIntent'
+}).addIntent({
+  name: 'AMAZON.HelpIntent'
+}).addIntent({
+  name: 'AMAZON.CancelIntent'
+}).addIntent({
+  name: 'DictionaryAPIIntent',
+  slots: [{
+    name: 'Phrase',
+    type: 'AMAZON.SearchQuery'
+  }],
+  samples: ['give me the definition of {Phrase}','tell me the definition of {Phrase}', 'tell me the meaning of {Phrase}','what is a {Phrase}', 'what is the meaning of {Phrase}', 'what is {Phrase}', 'define {Phrase}', 'to search for {Phrase}', 'what {Phrase} means', 'what {Phrase} are', 'what are {Phrase}', 'what {Phrase} is', 'what does {Phrase} mean', 'what does {Phrase} stand for']
+})// Build and write (this overwrites the existing model)
+.buildAndWrite('../skill-package/interactionModels/custom/en-US.json');

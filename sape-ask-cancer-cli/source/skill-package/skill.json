@@ -1,0 +1,56 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Search the NCI Dictionary of Cancer Terms for words related to cancer and medicine.",
+          "examplePhrases": [
+            "Alexa, ask sapient cancer dictionary to define breast cancer.",
+            "Alexa, ask sapient cancer dictionary what is leukemia?",
+            "Alexa, ask sapient cancer dictionary what is colorectal cancer?"
+          ],
+          "keywords": [
+            "Cancer",
+            "dictionary",
+            "cancer",
+            "dictionary",
+            "medical",
+            "dictionary"
+          ],
+          "name": "Sapient Cancer Dictionary",
+          "description": "Search the National Cancer Institute Dictionary of Cancer Terms for definitions of words related to cancer and medicine.\n\nTo open the application say:\n\"Alexa, Open Sapient Cancer.\"\n\nTo receive a definition use one of the phrases:\n\n\"Alexa,  What is ______?\" or \"Alexa, define ______.\"\n\nFor example:\n\"Alexa, what is colon cancer?\"\n\"Alexa, define leukemia.\"\n\n--The National Cancer Institute (NCI) is the federal government’s principal agency for cancer research and train",
+          "smallIconUri": "file://assets/images/en-US_smallIconUri.png",
+          "updatesDescription": "",
+          "largeIconUri": "file://assets/images/en-US_largeIconUri.png"
+        }
+      },
+      "automaticDistribution": {
+        "isActive": false
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "In order to test this skill try the following:\n\nStep 1: Open the skill \n\n \"Alexa open sapient cancer\"\n\n\n\nStep 2:  Ask for a term or definition\n\n\"Alexa define leukemia.\" \n\n\"Alexa what is lung cancer?\"\n\nStep 3: Exit the skill\n\n\"Alexa, exit.”\n\n\"Alexa, quit.”",
+      "category": "HEALTH_AND_FITNESS",
+      "distributionMode": "PUBLIC",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:970892800528:function:ask-SapientCancerDictionary-def-AlexaSkillFunction-FTJECNC3I5CX"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-US": {}
+      },
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}

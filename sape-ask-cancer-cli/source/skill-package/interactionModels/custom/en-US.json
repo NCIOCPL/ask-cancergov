@@ -1,0 +1,52 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "sapient cancer dictionary",
+      "intents": [
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "DictionaryAPIIntent",
+          "slots": [
+            {
+              "name": "Phrase",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "the meaning of the phrase {Phrase}",
+            "the meaning of the word {Phrase}",
+            "what is the meaning of {Phrase}",
+            "what is {Phrase}",
+            "define {Phrase}",
+            "to define {Phrase}",
+            "to search for {Phrase}",
+            "define {Phrase}",
+            "what a {Phrase} means",
+            "what does {Phrase} mean",
+            "what {Phrase} is",
+            "what {Phrase} are",
+            "what {Phrase} means",
+            "what {Phrase} means"
+          ]
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "13"
+}
