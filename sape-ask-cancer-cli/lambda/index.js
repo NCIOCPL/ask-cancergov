@@ -1,19 +1,19 @@
 const Alexa = require('ask-sdk-core');
 
-const LaunchRequestHandler = {
-  canHandle(handlerInput) {
-    return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
-  },
-  handle(handlerInput) {
-    const speakOutput = 'Welcome to Ask Cancer';
+// const LaunchRequestHandler = {
+//   canHandle(handlerInput) {
+//     return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
+//   },
+//   handle(handlerInput) {
+//     const speakOutput = 'Welcome to Ask Cancer';
 
-    // The response builder contains is an object that handles generating the
-    // JSON response that your skill returns.
-    return handlerInput.responseBuilder
-      .speak(speakOutput) // The text passed to speak, is what Alexa will say.
-      .getResponse();
-  },
-};
+//     // The response builder contains is an object that handles generating the
+//     // JSON response that your skill returns.
+//     return handlerInput.responseBuilder
+//       .speak(speakOutput) // The text passed to speak, is what Alexa will say.
+//       .getResponse();
+//   },
+// };
 
 
 // The Cancer-gov Ask Intent
@@ -64,41 +64,58 @@ const CancelAndStopHandler = {
   },
 };
 
-const SessionEndedRequestHandler = {
-  canHandle(handlerInput) {
-    return handlerInput.requestEnvelope.request.type === 'SessionEndedRequest';
-  },
-  handle(handlerInput) {
-    console.log(`Session ended with reason: ${handlerInput.requestEnvelope.request.reason}`);
+// const SessionEndedRequestHandler = {
+//   canHandle(handlerInput) {
+//     return handlerInput.requestEnvelope.request.type === 'SessionEndedRequest';
+//   },
+//   handle(handlerInput) {
+//     console.log(`Session ended with reason: ${handlerInput.requestEnvelope.request.reason}`);
 
-    return handlerInput.responseBuilder.getResponse();
-  },
-};
+//     return handlerInput.responseBuilder.getResponse();
+//   },
+// };
 
-const ErrorHandler = {
-  canHandle() {
-    return true;
-  },
-  handle(handlerInput, error) {
-    console.log(`Error handled: ${error.message}`);
-    console.log(error.trace);
+// const ErrorHandler = {
+//   canHandle() {
+//     return true;
+//   },
+//   handle(handlerInput, error) {
+//     console.log(`Error handled: ${error.message}`);
+//     console.log(error.trace);
 
-    return handlerInput.responseBuilder
-      .speak('Sorry, I can\'t understand the command. Please say again.')
-      .getResponse();
-  },
-};
+//     return handlerInput.responseBuilder
+//       .speak('Sorry, I can\'t understand the command. Please say again.')
+//       .getResponse();
+//   },
+// };
 
 const skillBuilder = Alexa.SkillBuilders.custom();
 
-exports.handler = skillBuilder
+
+// Request Handlers
+const LaunchRequestHandler        = require('./handlers/launch-request-handler');
+const DefinitionIntentHandler     = require('./handlers/definition-intent-handler');
+const HelpIntentHandler           = require('./handlers/help-intent-handler');
+const CancelAndStopIntentHandler  = require('./handlers/cancel-and-stop-intent-handler');
+const SessionEndedRequestHandler  = require('./handlers/session-ended-request-handler');
+
+// Error Handlers
+const ErrorHandler                = require('./handlers/error-handler');
+
+// Return a lambda function for this skill.
+exports.handler =  skillBuilder
   .addRequestHandlers(
     LaunchRequestHandler,
-    AskHandler,
-
-    HelpHandler,
-    CancelAndStopHandler,
-    SessionEndedRequestHandler,
+    DefinitionIntentHandler,
+    LaunchRequestHandler,
+    // AskHandler,
+    // HelpHandler,
+    // CancelAndStopHandler,
+    HelpIntentHandler,
+    CancelAndStopIntentHandler,
+    SessionEndedRequestHandler
   )
   .addErrorHandlers(ErrorHandler)
   .lambda();
+
+

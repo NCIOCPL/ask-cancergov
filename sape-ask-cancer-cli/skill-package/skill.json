@@ -1,26 +1,33 @@
 {
   "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:970892800528:function:serverlessrepo-sape-ask-c-alexaskillskitnodejsfact-11RCCV1G741MA"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
     "publishingInformation": {
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionCountries": [],
+      "isAvailableWorldwide": true,
       "locales": {
         "en-US": {
-          "summary": "Sample Short Description",
+          "description": "This is a aample full description.",
           "examplePhrases": [
-            "Alexa open hello world",
-            "hello",
-            "help"
+            "Alexa open sape cancer",
+            "what is breast cancer",
+            "define leukemia",
+            "help",
           ],
-          "name": "sape-ask-cancer-cli",
-          "description": "Sample Full Description"
+          "keywords": [],
+          "name": "Sape Cancer",
+          "summary": "This is a sample short description."
         }
       },
-      "isAvailableWorldwide": true,
-      "testingInstructions": "Sample Testing Instructions.",
-      "category": "KNOWLEDGE_AND_TRIVIA",
-      "distributionCountries": []
-    },
-    "apis": {
-      "custom": {}
-    },
-    "manifestVersion": "1.0"
+      "testingInstructions": "These are sample testing instructions."
+    }
   }
 }

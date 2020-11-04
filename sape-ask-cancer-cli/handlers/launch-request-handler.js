@@ -17,6 +17,7 @@ const LaunchRequestHandler = {
     // responded within 8 seconds.
     // What should we display on a screen if there is one?
     .withSimpleCard('Hello World', speechText)
+    .withShouldEndSession(false)
     .getResponse();
   }
 };

@@ -1,40 +1,90 @@
 {
-    "interactionModel": {
-        "languageModel": {
-            "invocationName": "hello world",
-            "intents": [
-                {
-                    "name": "AMAZON.CancelIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.HelpIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.StopIntent",
-                    "samples": []
-                },
-                {
-                    "name": "HelloWorldIntent",
-                    "slots": [],
-                    "samples": [
-                        "hello",
-                        "how are you",
-                        "say hi world",
-                        "say hi",
-                        "hi",
-                        "say hello world",
-                        "say hello"
-                    ]
-                },
-                {
-                    "name": "AMAZON.NavigateHomeIntent",
-                    "samples": []
-                }
-            ],
-            "types": []
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "sape cancer",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AskIntent",
+          "slots": [
+            {
+              "name": "information",
+              "type": "SAPE_CANCER_INFO"
+            }
+          ],
+          "samples": [
+            "about {information}"
+          ]
+        },
+        {
+          "name": "DefinitionIntent",
+          "slots": [
+            {
+              "name": "keyword",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "what is {keyword}",
+            "define {keyword}"
+          ]
         }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "id": "BILE",
+              "name": {
+                "value": "Bile Duct Cancer"
+              }
+            },
+            {
+              "id": "BONECNCR",
+              "name": {
+                "value": "Bone Cancer"
+              }
+            },
+            {
+              "id": "CNCRTYP",
+              "name": {
+                "value": "Cancer Types"
+              }
+            },
+            {
+              "name": {
+                "value": "Everything"
+              }
+            }
+          ],
+          "name": "SAPE_CANCER_INFO"
+        }
+      ],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
     }
-  }
-  
+  },
+  "version": "8"
+}
