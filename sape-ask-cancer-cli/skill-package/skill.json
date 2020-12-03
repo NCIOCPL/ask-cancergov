@@ -3,28 +3,33 @@
     "apis": {
       "custom": {
         "endpoint": {
-          "uri": "arn:aws:lambda:us-east-1:970892800528:function:serverlessrepo-sape-ask-c-alexaskillskitnodejsfact-11RCCV1G741MA"
-        },
-        "interfaces": []
+          "uri": "arn:aws:lambda:us-east-1:970892800528:function:ask-SapeCancer-default-skillSta-AlexaSkillFunction-1YAKIBQ4MICD"
+        }
       }
     },
     "manifestVersion": "1.0",
     "publishingInformation": {
-      "category": "KNOWLEDGE_AND_TRIVIA",
+      "category": "HEALTH_AND_FITNESS",
       "distributionCountries": [],
       "isAvailableWorldwide": true,
       "locales": {
         "en-US": {
-          "description": "This is a aample full description.",
+          "description": "This is a sample full description.",
           "examplePhrases": [
-            "Alexa open sape cancer",
-            "what is breast cancer",
-            "define leukemia",
-            "help",
+            "Alexa, Open Sapient Cancer Dictionary.",
+            "What is colon cancer?",
+            "Define leukemia."
           ],
-          "keywords": [],
-          "name": "Sape Cancer",
-          "summary": "This is a sample short description."
+          "keywords": [
+            "Cancer",
+            "dictionary",
+            "cancer",
+            "dictionary",
+            "medical",
+            "dictionary"
+          ],
+          "name": "Sapient Cancer Dictionary.",
+          "summary": "Search the NCI Dictionary of Cancer Terms for words related to cancer and medicine."
         }
       },
       "testingInstructions": "These are sample testing instructions."

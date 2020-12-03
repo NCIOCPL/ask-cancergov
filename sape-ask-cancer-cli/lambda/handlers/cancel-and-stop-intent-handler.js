@@ -12,7 +12,7 @@ const CancelAndStopIntentHandler = {
 
     return handlerInput.responseBuilder
       .speak(speechText)
-      .withSimpleCard('Hello World', speechText)
+    //  .withSimpleCard('Hello World', speechText)
       .withShouldEndSession(true)
       .getResponse();
   }

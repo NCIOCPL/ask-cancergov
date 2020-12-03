@@ -16,7 +16,7 @@ const LaunchRequestHandler = {
     // We will not ask for a reprompt but we could say something else if the user has not
     // responded within 8 seconds.
     // What should we display on a screen if there is one?
-    .withSimpleCard('Hello World', speechText)
+    //.withSimpleCard('Hello World', speechText)
     .withShouldEndSession(false)
     .getResponse();
   }

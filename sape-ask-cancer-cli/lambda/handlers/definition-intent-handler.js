@@ -18,7 +18,7 @@ const DefinitionIntentHandler = {
     // Since we do not use synonyms in the skill, we don't need to worry about
     // slot resolution and can just use getSlotValue.
     const keyword = Alexa.getSlotValue(handlerInput.requestEnvelope, "keyword");
-
+1
     const speechText = `I would define ${keyword}`;
 
     // TODO: Handle interactive response when there are more than 1 match?
@@ -28,9 +28,9 @@ const DefinitionIntentHandler = {
       // Respond with this spoken text
       .speak(speechText)
       // Show this on the echo display
-      .withSimpleCard('Hello World', speechText)
+     // .withSimpleCard('Hello World', speechText)
       // Indicate we are done.
-      .withShouldEndSession(true)
+      .withShouldEndSession(false)
       // Finalize the response
       .getResponse();
   }

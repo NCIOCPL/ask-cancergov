@@ -4,7 +4,31 @@
     "default": {
       "skillInfrastructure": {
         "@ask-cli/cfn-deployer": {
-          "deployState": {}
+          "deployState": {
+            "default": {
+              "s3": {
+                "bucket": "ask-sape-ask-cancer-cli-askclidef-useast1-1607007655347",
+                "key": "endpoint/build.zip"
+              },
+              "stackId": "arn:aws:cloudformation:us-east-1:970892800528:stack/ask-SapeCancer-default-skillStack-1604519612022/6b87dcc0-1ed7-11eb-8c98-0e229acdb0d3",
+              "outputs": [
+                {
+                  "OutputKey": "SkillEndpoint",
+                  "OutputValue": "arn:aws:lambda:us-east-1:970892800528:function:ask-SapeCancer-default-skillSta-AlexaSkillFunction-1YAKIBQ4MICD",
+                  "Description": "LambdaARN for the regional endpoint"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "skillId": "amzn1.ask.skill.36f0f152-2421-4eb7-967e-bacd7722f342",
+      "skillMetadata": {
+        "lastDeployHash": "kKyAFypWODAUv4MiBekk+Q/BSO8="
+      },
+      "code": {
+        "default": {
+          "lastDeployHash": "S0gWGOq/+j2fHofnzqVmKhZG/NQ="
         }
       }
     }
